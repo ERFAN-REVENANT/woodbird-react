@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Roobert Font Styles */
+@font-face {
+    font-family: 'Roobert';
+    src: url('./assets/fonts/RoobertPRO-Bold.ttf') format('truetype');
+    font-weight: 700; /* Assuming Bold corresponds to weight 700 */
+    font-style: normal;
+}
+
+/* Sorren Ex Font Styles */
+@font-face {
+    font-family: 'Sorren Ex';
+    src: url('./assets/fonts/Sorren Ex Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sorren Ex';
+    src: url('./assets/fonts/Sorren Ex SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sorren Ex';
+    src: url('./assets/fonts/Sorren Ex Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sorren Ex';
+    src: url('./assets/fonts/Sorren Ex Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}

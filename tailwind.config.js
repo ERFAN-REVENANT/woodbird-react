@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx,css}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roobert: ["Roobert"],
+        "sorren-ex": ["Sorren Ex", "sans-serif"],
+      },
+    },
   },
   plugins: [],
-}
+};

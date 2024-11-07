@@ -554,54 +554,94 @@ video {
   display: none;
 }
 
-.visible {
-  visibility: visible;
+.flex {
+  display: flex;
 }
 
-.collapse {
-  visibility: collapse;
+.items-center {
+  align-items: center;
 }
 
-.relative {
-  position: relative;
+.justify-between {
+  justify-content: space-between;
 }
 
-.block {
-  display: block;
+.gap-3 {
+  gap: 0.75rem;
 }
 
-.table {
-  display: table;
+.p-3 {
+  padding: 0.75rem;
 }
 
-.contents {
-  display: contents;
+.p-5 {
+  padding: 1.25rem;
 }
 
-.hidden {
-  display: none;
+.p-4 {
+  padding: 1rem;
 }
 
-.border-collapse {
-  border-collapse: collapse;
+.font-roobert {
+  font-family: Roobert;
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.font-bold {
+  font-weight: 700;
 }
 
-.resize {
-  resize: both;
+/* Roobert Font Styles */
+
+@font-face {
+  font-family: 'Roobert';
+
+  src: url('./assets/fonts/RoobertPRO-Bold.ttf') format('truetype');
+
+  font-weight: 700;
+
+  /* Assuming Bold corresponds to weight 700 */
+
+  font-style: normal;
 }
 
-.border {
-  border-width: 1px;
+/* Sorren Ex Font Styles */
+
+@font-face {
+  font-family: 'Sorren Ex';
+
+  src: url('./assets/fonts/Sorren Ex Medium.otf') format('opentype');
+
+  font-weight: 500;
+
+  font-style: normal;
 }
 
-.underline {
-  text-decoration-line: underline;
+@font-face {
+  font-family: 'Sorren Ex';
+
+  src: url('./assets/fonts/Sorren Ex SemiBold.otf') format('opentype');
+
+  font-weight: 600;
+
+  font-style: normal;
 }
 
-.outline {
-  outline-style: solid;
+@font-face {
+  font-family: 'Sorren Ex';
+
+  src: url('./assets/fonts/Sorren Ex Bold.otf') format('opentype');
+
+  font-weight: 700;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sorren Ex';
+
+  src: url('./assets/fonts/Sorren Ex Black.otf') format('opentype');
+
+  font-weight: 900;
+
+  font-style: normal;
 }
