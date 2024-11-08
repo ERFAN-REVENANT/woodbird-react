@@ -68,14 +68,15 @@ const Hero = () => {
       <div className="flex w-full gap-2 items-center font-roobert justify-between mt-[14rem]">
         <img
           src={img1}
-          className="h-[28rem] w-auto transition-transform duration-700 ease-in-out"
+          className="h-[28rem] w-auto ease-in-out transition-[margin-top] duration-700" // Smooth animation only on margin-top
+          style={{ marginTop: isExpanded ? "16rem" : "0" }}
           alt=""
         />
 
         <div
           className={`absolute transition-transform duration-700 ease-in-out ${
             isExpanded
-              ? "top-[62rem] left-[50%] transform -translate-x-1/2 scale-[1.955]"
+              ? "top-[62rem] left-[50%] transform -translate-x-1/2 scale-[1.9555]"
               : "top-[44rem] left-[50%] transform -translate-x-1/2 scale-100"
           }`}
           onMouseEnter={handleMouseEnter}
@@ -117,7 +118,8 @@ const Hero = () => {
 
         <img
           src={img2}
-          className="h-[28rem] w-auto transition-transform duration-700 ease-in-out"
+          className="h-[28rem] w-auto ease-in-out transition-[margin-top] duration-700" // Smooth animation only on margin-top
+          style={{ marginTop: isExpanded ? "16rem" : "0" }}
           alt=""
         />
       </div>
