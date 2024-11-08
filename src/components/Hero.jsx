@@ -5,12 +5,11 @@ import video from "../assets/video.mp4";
 import { FaPlay } from "react-icons/fa";
 
 const Hero = () => {
-  const [isMuted, setIsMuted] = useState(true); // Manage mute state
-  const [showPlayButton, setShowPlayButton] = useState(false); // Button visibility state
-  const [isExpanded, setIsExpanded] = useState(false); // Track expanded state for animation
-  const videoRef = useRef(null); // Reference to control video
+  const [isMuted, setIsMuted] = useState(true); 
+  const [showPlayButton, setShowPlayButton] = useState(false); 
+  const [isExpanded, setIsExpanded] = useState(false); 
+  const videoRef = useRef(null);
 
-  // Handle hover to show "Watch Brand Video" button
   const handleMouseEnter = () => {
     if (videoRef.current && isMuted) {
       videoRef.current.play();
@@ -18,7 +17,6 @@ const Hero = () => {
     }
   };
 
-  // Handle mouse leave to hide button and pause video if muted
   const handleMouseLeave = () => {
     if (isMuted) {
       setShowPlayButton(false);
@@ -26,24 +24,22 @@ const Hero = () => {
     }
   };
 
-  // Unmute video, expand container, and hide the play button
   const handleMuteToggle = () => {
     if (videoRef.current) {
-      videoRef.current.muted = false; // Unmute video
-      videoRef.current.play(); // Keep video playing
-      setIsMuted(false); // Update mute state
-      setShowPlayButton(false); // Hide "Watch Brand Video" button
-      setIsExpanded(true); // Trigger expanded layout
+      videoRef.current.muted = false; 
+      videoRef.current.play(); 
+      setIsMuted(false); 
+      setShowPlayButton(false); 
+      setIsExpanded(true); 
     }
   };
 
-  // Toggle mute state when mute/unmute button is clicked
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
       setIsMuted(videoRef.current.muted);
       if (videoRef.current.muted) {
-        setIsExpanded(false); // Reset layout if muted again
+        setIsExpanded(false); 
       }
     }
   };
@@ -89,7 +85,7 @@ const Hero = () => {
             muted={isMuted}
           />
 
-          {/* Display "Watch Brand Video" button on hover, if still muted */}
+         
           {showPlayButton && (
             <button
               onClick={handleMuteToggle}
@@ -100,7 +96,7 @@ const Hero = () => {
             </button>
           )}
 
-          {/* Display text or "CLOSE VIDEO" button based on mute state */}
+        
           {isMuted ? (
             <p className="mt-2">
               From Our Hearts <br />
