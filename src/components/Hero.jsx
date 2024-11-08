@@ -5,9 +5,9 @@ import video from "../assets/video.mp4";
 import { FaPlay } from "react-icons/fa";
 
 const Hero = () => {
-  const [isMuted, setIsMuted] = useState(true); 
-  const [showPlayButton, setShowPlayButton] = useState(false); 
-  const [isExpanded, setIsExpanded] = useState(false); 
+  const [isMuted, setIsMuted] = useState(true);
+  const [showPlayButton, setShowPlayButton] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const videoRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -26,11 +26,11 @@ const Hero = () => {
 
   const handleMuteToggle = () => {
     if (videoRef.current) {
-      videoRef.current.muted = false; 
-      videoRef.current.play(); 
-      setIsMuted(false); 
-      setShowPlayButton(false); 
-      setIsExpanded(true); 
+      videoRef.current.muted = false;
+      videoRef.current.play();
+      setIsMuted(false);
+      setShowPlayButton(false);
+      setIsExpanded(true);
     }
   };
 
@@ -39,7 +39,7 @@ const Hero = () => {
       videoRef.current.muted = !videoRef.current.muted;
       setIsMuted(videoRef.current.muted);
       if (videoRef.current.muted) {
-        setIsExpanded(false); 
+        setIsExpanded(false);
       }
     }
   };
@@ -64,7 +64,7 @@ const Hero = () => {
       <div className="flex w-full gap-2 items-center font-roobert justify-between mt-[14rem]">
         <img
           src={img1}
-          className="h-[28rem] w-auto ease-in-out transition-[margin-top] duration-700" // Smooth animation only on margin-top
+          className="h-[28rem] w-auto ease-in-out transition-[margin-top] duration-200" // Smooth animation only on margin-top
           style={{ marginTop: isExpanded ? "16rem" : "0" }}
           alt=""
         />
@@ -85,7 +85,6 @@ const Hero = () => {
             muted={isMuted}
           />
 
-         
           {showPlayButton && (
             <button
               onClick={handleMuteToggle}
@@ -96,7 +95,6 @@ const Hero = () => {
             </button>
           )}
 
-        
           {isMuted ? (
             <p className="mt-2">
               From Our Hearts <br />
@@ -114,7 +112,7 @@ const Hero = () => {
 
         <img
           src={img2}
-          className="h-[28rem] w-auto ease-in-out transition-[margin-top] duration-700" // Smooth animation only on margin-top
+          className="h-[28rem] w-auto ease-in-out transition-[margin-top] duration-200" // Smooth animation only on margin-top
           style={{ marginTop: isExpanded ? "16rem" : "0" }}
           alt=""
         />
