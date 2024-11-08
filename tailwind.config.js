@@ -1,11 +1,11 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  content: ["./src/**/*.{html,jsx,css}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx,css}"],
   theme: {
     extend: {
       fontFamily: {
-        roobert: ["Roobert"],
-        "sorren-ex": ["Sorren Ex", "sans-serif"],
+        roobert: ["Roobert", "sans-serif"],
+        "neue": ["Neue", "sans-serif"],
       },
     },
   },
